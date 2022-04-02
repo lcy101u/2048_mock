@@ -33,5 +33,24 @@ body {
 }
 
 .tile {
+  --x: 1;
+  --y: 2;
+
+  /* Positioning*/
   position: absolute;
+  top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  
+  /* Display*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Box Model*/
+  border-radius: 1vmin;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  
+  /* Font and other*/
+  background-color: red;
 }
