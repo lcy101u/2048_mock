@@ -14,6 +14,10 @@ export default class Grid {
     })
   }
 
+  get cellsByColum() {
+    return this.#cells,reduce
+  }
+
   // 取得沒有數字的區塊
   get #emptyCells() {
     return this.#cells.filter(cell => cell.tile == null)
@@ -39,7 +43,7 @@ class Cell {
   get tile() {
     return this.#tile
   }
-  
+
   set tile(value) {
     this.#tile = value
     if(value == null) return 
